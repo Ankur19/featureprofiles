@@ -110,6 +110,10 @@ message Options {
 
   // gRPC request timeout (second)
   int32 timeout = 7;
+  
+  // max send & recv size (in bytes) for gNOI connection. Clients and devices
+  // may transfer files larger than 4MB which is the default maximum for gRPC.
+  int32 max_io_size = 8;
 }
 
 // Port binding.
